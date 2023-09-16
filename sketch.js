@@ -1,18 +1,22 @@
 let pemain1, pemain2
 let sfxLoncat
 let bg
+let musik
 
 function preload() {
   soundFormats('mp3')
+  musik = loadSound('sound.mp3')
   sfxLoncat = loadSound('jump.mp3')
-  bg = loadImage('bgbalapkarung.jpg')
+  bg = loadImage('lapang.jpeg')
 }
 
 function setup() {
   createCanvas(600, 400);
   
-  pemain1 = new Pemain(230, 'red')
-  pemain2 = new Pemain(height-70, 'blue')
+  musik.play()
+  
+  pemain1 = new Pemain(220, 'red')
+  pemain2 = new Pemain(height-90, 'blue')
 }
 
 function draw() {

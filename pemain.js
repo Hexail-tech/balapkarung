@@ -17,7 +17,7 @@ class Pemain {
   }
   
   finish() {
-    if (this.x > width) {
+    if (this.x > 550) {
       fill(this.warna)
       textSize(30)
       textAlign(CENTER)
