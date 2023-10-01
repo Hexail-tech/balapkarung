@@ -1,24 +1,21 @@
 class Pemain {
-  constructor(y, warna) {
-    this.d = 40
-    this.warna = color(warna)
-    this.x = 50
+  constructor(y, player) {
+    this.player = player
     this.y = y
     this.speed = 20
   }
   
   tampilkan() {
-    fill(this.warna)
-    circle(this.x, this.y, this.d)
+    image(imgpemain1, 25, 250, 50, 100);
+    image(imgpemain2, 25, 150, 50, 100);
   }
   
   maju() {
-    this.x += this.speed
+    this.player += this.speed
   }
   
   finish() {
-    if (this.x > 550) {
-      fill(this.warna)
+    if (this.player > 550) {
       textSize(30)
       textAlign(CENTER)
       text("FINISH", width/2, height/2)
