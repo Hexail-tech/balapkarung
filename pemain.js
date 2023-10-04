@@ -1,7 +1,7 @@
 class Pemain {
   constructor(x, y, imgkarakter) {
     this.imgkarakter = imgkarakter
-    this.x = 50
+    this.x = x
     this.y = y
     this.speed = 20
   }
@@ -16,7 +16,8 @@ class Pemain {
   }
   
   finish() {
-    if (this.x > 550) {
+    if (this.x > 520) {
+      sfinish.play()
       textSize(30)
       textAlign(CENTER)
       text("FINISH", width/2, height/2)
